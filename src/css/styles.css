@@ -23,3 +23,36 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Створюємо сітку з колонками шириною не менше 250px */
+  grid-gap: 20px; /* Відступ між картками */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+.card-info .property {
+  font-weight: bold;
+}
+
+.card-info .value {
+  font-weight: normal;
+}
